@@ -1,0 +1,580 @@
+/**** 0. Main Document Layout ****/
+:root {
+    --font-color: white;
+    --base-color: #233151;
+    --base-color-2: #2c3e68;
+    --secondary-2: #6960BE;
+    --secondary-1: #F8BBD0;
+    --primary-1: #Fcc176;
+}
+
+body,
+html {
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-color);
+    color: var(--font-color);
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Roboto;
+}
+
+.panel {
+    display: grid;
+    padding: 50px 100px;
+    margin: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 25px;
+}
+
+.panel-heading {
+    grid-column: span 12;
+    text-align: center;
+}
+
+.panel-heading h1{
+    text-transform: uppercase;
+}
+
+.panel-heading hr {
+    border: none;
+    height: 3px;
+    width: 25%;
+    background-color: white;
+}
+
+/**** 1. Home Page/Top Panel ****/
+
+/* 1.1 Container Sizing and Background */
+.home {
+    height: 100vh;
+    text-align: center;
+}
+
+.bg-gradient {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(to top, var(--secondary-1), darkslateblue);
+    animation: fadein 2s ease-out forwards 1.5s;
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+    }
+}
+
+/* 1.2 Logobox */
+.logobox {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 10%;
+}
+
+.logobox p {
+    font-family: Roboto;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    /* font-weight: 100; */
+}
+
+#home-logo {
+    height: 120px;
+    width: 200px;
+    opacity: 1;
+}
+
+/* 1.3 Skyline SVG Animation */
+.skyline {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+}
+
+#skyline-path {
+    fill: var(--base-color);
+    stroke: var(--font-color);
+    stroke-width: 5px;
+    stroke-dasharray: 0 70000;
+    stroke-dashoffset: -3200;
+    animation: dash 2.5s ease-out forwards;
+}
+
+@keyframes dash {
+    to {
+        stroke-dasharray: 6400 70000;
+        stroke-dashoffset: 0;
+    }
+}
+
+/**** 2. Navigation Bar ****/
+
+/* 2.1 General - Positioning, Sizing, Stickiness */
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--base-color);
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0px;
+}
+
+/* 2.2 Navbar Logo */
+#nav-logo {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    padding: 15px 0px;
+    visibility: hidden;
+    left: 25px;
+    opacity: 0;
+    transition: opacity .3s linear 0s;
+    -webkit-transition: opacity .3s linear 0s;
+    /* Safari */
+}
+
+.sticky #nav-logo {
+    visibility: initial;
+    opacity: .75;
+}
+
+.sticky #nav-logo:hover {
+    opacity: 1;
+}
+
+/* 2.3 Navbar Links */
+.navbar ul {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+}
+
+.navbar ul li {
+    position: relative;
+    padding-top: 20px;
+    margin: 0px 10px;
+    height: auto;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    opacity: .75;
+    color: var(--font-color);
+}
+
+.navbar a.current {
+    opacity: 1;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+.navbar span {
+    position: absolute;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, 0) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover~span {
+    transform: translate(-50%, 0) scaleX(1);
+    opacity: 1;
+}
+
+/**** 3. About Me ****/
+
+/* 3.1 General Position, Grid Definition */
+.about {
+    margin-bottom: 150px;
+}
+
+.about hr{
+    background-color: var(--primary-1);
+}
+
+/* 3.2 Mission Statement */
+.mission-statement {
+    text-align: left;
+    grid-column: span 8;
+}
+
+/* 3.3 Bio */
+.bio {
+    text-align: left;
+    grid-column: span 8;
+    grid-row: 3;
+}
+
+/* 3.4 Portrait */
+.portrait {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.portrait img {
+    object-fit: cover;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid var(--font-color);
+}
+
+/* 3.5 Social Media Links */
+.socialmedia {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.socialmedia ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.socialmedia li {
+    margin-bottom: 10px;
+}
+
+.socialmedia img {
+    height: auto;
+    width: 35px;
+    opacity: .75;
+    transition: opacity .3s linear 0s;
+    -webkit-transition: opacity .3s linear 0s;
+    /* Safari */
+}
+
+.socialmedia img:hover {
+    opacity: 1;
+}
+
+/**** 4. Skills ****/
+
+/* 4.1 General Formatting */
+.skills {
+    text-align: center;
+    background-color: var(--base-color-2);
+}
+
+.skills hr {
+    background-color: var(--secondary-1);
+}
+
+/* 4.2 Simple Content Layout */
+.skills-content {
+    grid-column: span 12;
+}
+
+/* 4.3 List of Coding Languages */
+.skills-code {
+    grid-column: span 12;
+    list-style: none;
+}
+
+.skills-code li {
+    padding: 0 3em;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.skills-code li.inprogress {
+    opacity: .5;
+}
+
+.skills-code h5 {
+    text-align: right;
+    opacity: .5;
+}
+
+/* 4.4 List of Tools */
+.skills-tools {
+    grid-column: 5 / span 4;
+}
+
+.skills-tools ul {
+    text-align: left;
+    columns: 2;
+    column-gap: 3em
+}
+
+/**** 5. Experience ****/
+
+/* 5.1 General Formatting */
+.experience hr {
+    background-color: var(--secondary-2);
+}   
+
+/* 5.2 Base Grid Layout */
+.exp-sidebar {
+    grid-column: span 2;
+    text-align: right;
+    overflow: hidden;
+}
+
+.exp-content {
+    grid-column: span 6;
+    text-align: left;   
+}
+
+.exp-skills {
+    grid-column: span 4;
+    text-align: left;
+}
+
+/* 5.3 Sidebar Formatting */
+.sidebar-picbox {
+    height: auto;
+}
+
+#company1 {
+    border-right: 2px solid var(--secondary-1);
+    /* border-right: 2px solid var(--primary-1); */
+}
+
+#company2 {
+    border-right: 2px solid var(--secondary-1);
+    /* border-right: 2px solid var(--secondary-1); */
+}
+
+#company3 {
+    border-right: 2px solid var(--secondary-1);
+}
+
+.exp-sidebar .sidebar-picbox img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.exp-sidebar .sidebar-filler {
+    height: 100%;
+    border-right: 2.5px solid var(--font-color);
+}
+
+/**** 6. My Work ****/
+
+/* 7.1 General Formatting */
+.work {
+    padding: 50px;
+    text-align: center;
+    background-color:var(--base-color-2);
+}
+
+.work hr {
+    background-color: var(--primary-1);
+}
+
+.work-content {
+    grid-column: span 12;
+}
+
+
+/**** 6. Contact Me ****/
+
+/* 6.1 General Formatting */
+.contact {
+    padding: 50px;
+    text-align: center;
+    background-color: var(--base-color);
+}
+
+.contact hr {
+    background-color: var(--secondary-1);
+}
+
+/* 6.2 Contact Me Social Media Links */
+.contact-media {
+    grid-column: span 6;
+}
+
+/* 6.3 Contact Me Form */
+.contact-form {
+    grid-column: span 6;
+    text-align: left;
+}
+
+.contact-form h3 {
+    margin-bottom: 5px;
+}
+
+/* 6.4 Text Outline Animation */
+
+.txtfield {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.txtfield textarea,
+.txtfield input {
+    background-color: var(--base-color-2);
+    color: white;
+    border: 2px solid transparent;
+    font-family: inherit;
+    width: 100%;
+    margin: 0;
+    padding: .35em .45em;
+    box-sizing: content-box;
+}
+
+.txtfield textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.txtfield textarea {
+    height: 200px;
+    vertical-align: top;
+    resize: none;
+}
+
+.txtfield span {
+    position: absolute;
+    background-color: white;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.outline-bottom,
+.outline-top {
+    height: 1px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+}
+
+.outline-left,
+.outline-right {
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0);
+}
+
+.outline-top {
+    top: 0;
+}
+
+.outline-bottom {
+    bottom: 0;
+}
+
+.outline-left {
+    left: 0;
+}
+
+.outline-right {
+    right: 0;
+}
+
+textarea:focus~.outline-top,
+textarea:focus~.outline-bottom,
+input:focus~.outline-top,
+input:focus~.outline-bottom {
+    transform: scaleX(1);
+}
+
+textarea:focus~.outline-left,
+textarea:focus~.outline-right,
+input:focus~.outline-left,
+input:focus~.outline-right {
+    transform: scaleY(1);
+}
+
+/**** 7. Current Design Elements ****/
+
+/* 7.1 General Formatting */
+.design {
+    text-align: center;
+    padding: 50px;
+}
+
+.column-grid-container {
+    display: grid;
+    height: 500px;
+    grid-template-rows: 6fr 3fr 2fr 2fr;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: white;
+    grid-column-gap: 25px;
+    padding: 25px;
+}
+
+/* 7.2 Color Palette */
+
+.palette-base {
+    grid-row: 1;
+    grid-column: span 2;
+}
+
+.palette-base1 {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--base-color);
+}
+
+.palette-base2 {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 49%;
+    height: 100%;
+    background-color: var(--base-color-2);
+}
+
+.palette-secondary2 {
+    grid-column: span 2;
+    grid-row: 2;
+    background-color: var(--secondary-2);
+}
+
+.palette-secondary1 {
+    grid-column: span 2;
+    grid-row: 3;
+    background-color: var(--secondary-1);
+}
+
+.palette-primary1 {
+    grid-column: span 2;
+    grid-row: 4;
+    background-color: var(--primary-1);
+}
+
+/* 7.3 Typography */
+.typography {
+    text-align: center;
+    grid-column: 3 / span 4;
+    grid-row: span 13;
+    background-color: var(--base-color);
+}
+
+.typography p {
+    font-size: 1.75em;
+}

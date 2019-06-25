@@ -1,0 +1,43 @@
+TODO:
+
+Nail down a solid genre on soundcloud or spotify for music to listen to.
+Complete Content of Main Site. Plan content and layout of additional pages.
+Maintenance of CSS and HTML
+    Normalize Color Scheme with variables,
+        Experiment with different shade for base color.
+        A way the color scheme can work cross platform is by having tags at the top that change the color for all elements.
+    Set global padding or margin settings where necessary,
+        Make padding on right and left bigger. Maybe use CSS grid for whole site?
+    Create a new class for bottom content panels if much of the css is shared,
+    Remove unncessary tags/ids.
+Create Changing text snippet next to name
+Restructure JS functions
+    Organize into separate files if necessary,
+    Adapt scrollTrack function to accomodate any number of links.
+Make Page Responsive
+    Refer to freecodecamp bookmark. Use rem and em to make sizes responsive.
+
+??Add scroll snapping, after website has been midified for different layout sizes
+??Load page with simple line in the middle? Similar to the content headers
+??Code a script that responds with random encouraging messages to any acheivement you send them.
+??Create a folder for Inspirational designs.
+    ??Maybe include sections in the journal/blog for design and coding. Put inspiration in a separate section.
+
+Other Projects:
+Roadmap of projects/learning map
+    Similar to a business model
+    What I want to learn and do
+    What I've learned from jobs/internships (detours if necessary)
+    Show accountability and learning process.
+    Include this with the journal/blog section of the website
+Create Template Logo
+    Experiment with Various fonts and layouts
+    Create reussable logos in basic colors for designs
+Font Design
+    Create typeable display font as design project
+Music Visualizer??
+    Behind the Mountains. Starts when clicked and permission is given.
+    Changing theme based on time of day
+    Basic Javascript (Check bookmarked link) for time evaluation. Try to write this one from scratch
+    Change gradient based on time of day (Would work best with stages, rather than being completely dynamic. That way the color palettes can correspond).
+    Color pallete can be "global" element (Maybe of the HTML?) That will determine all elements simultaneously.
