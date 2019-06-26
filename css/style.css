@@ -1,5 +1,6 @@
 /**** 0. Main Document Layout ****/
 :root {
+
     --font-color: white;
     --base-color: #233151;
     --base-color-2: #2c3e68;
@@ -11,6 +12,7 @@
 body,
 html {
     font-family: Open Sans;
+    /* font-size: 12px; */
     margin: 0;
     padding: 0;
     background-color: var(--base-color);
@@ -24,21 +26,28 @@ h3 {
     font-family: Roboto;
 }
 
-h1 {
+.panel {
+    display: grid;
+    padding: 3rem 4rem;
+    margin: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1.5em;
+}
+
+.panel-heading {
+    grid-column: span 12;
+    text-align: center;
+}
+
+.panel-heading h1 {
     text-transform: uppercase;
 }
 
-hr {
+.panel-heading hr {
     border: none;
-    height: 3px;
+    height: .2em;
     width: 25%;
-    margin-bottom: 50px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 25px;
+    background-color: white;
 }
 
 /**** 1. Home Page/Top Panel ****/
@@ -51,7 +60,7 @@ hr {
 
 .bg-gradient {
     width: 100%;
-    height: 90%;
+    height: 98%;
     position: absolute;
     opacity: 0;
     background: linear-gradient(to top, var(--secondary-1), darkslateblue);
@@ -80,8 +89,8 @@ hr {
 }
 
 #home-logo {
-    height: 120px;
-    width: 200px;
+    height: 7.5em;
+    width: 12.5em;
     opacity: 1;
 }
 
@@ -89,7 +98,7 @@ hr {
 .skyline {
     position: absolute;
     left: 0;
-    bottom: 60px;
+    bottom: 4em;
 }
 
 #skyline-path {
@@ -113,7 +122,7 @@ hr {
 /* 2.1 General - Positioning, Sizing, Stickiness */
 .navbar {
     width: 100%;
-    height: 60px;
+    height: 4em;
     position: absolute;
     bottom: 0px;
     background-color: var(--base-color);
@@ -128,12 +137,12 @@ hr {
 
 /* 2.2 Navbar Logo */
 #nav-logo {
-    width: 50px;
-    height: 30px;
+    width: 3.33em;
+    height: 2em;
     position: absolute;
-    padding: 15px 0px;
+    padding: 1em 0em;
     visibility: hidden;
-    left: 25px;
+    left: 1.2em;
     opacity: 0;
     transition: opacity .3s linear 0s;
     -webkit-transition: opacity .3s linear 0s;
@@ -159,8 +168,8 @@ hr {
 
 .navbar ul li {
     position: relative;
-    padding-top: 20px;
-    margin: 0px 10px;
+    padding-top: 1.5em;
+    margin: 0em 1em;
     height: auto;
     display: inline-block;
     text-transform: uppercase;
@@ -173,15 +182,15 @@ hr {
     color: var(--font-color);
 }
 
-.navbar ul li a.current {
+.navbar a.current {
     opacity: 1;
 }
 
-.navbar ul li a:hover {
+.navbar a:hover {
     opacity: 1;
 }
 
-.navbar ul li span {
+.navbar span {
     position: absolute;
     left: 50%;
     background-color: white;
@@ -193,7 +202,7 @@ hr {
     transition: all 0.3s ease;
 }
 
-.navbar ul li a:hover~span {
+.navbar a:hover~span {
     transform: translate(-50%, 0) scaleX(1);
     opacity: 1;
 }
@@ -202,43 +211,44 @@ hr {
 
 /* 3.1 General Position, Grid Definition */
 .about {
-    padding: 50px;
-    padding-bottom: 150px;
-    height: 100%;
-    text-align: center;
+    margin-bottom: 150px;
 }
 
 .about hr {
     background-color: var(--primary-1);
 }
 
-.about-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) auto auto 100px;
-    grid-template-rows: auto auto;
-    grid-gap: 25px;
-}
-
 /* 3.2 Mission Statement */
 .mission-statement {
     text-align: left;
-    grid-column: span 3;
-    /* border: 1px solid red; */
+    grid-column: span 8;
 }
 
 /* 3.3 Bio */
 .bio {
     text-align: left;
-    grid-column: span 3;
-    grid-row: 2;
-    /* border: 1px solid yellow; */
+    grid-column: span 8;
+    grid-row: 3;
 }
 
-/* 3.4 Social Media Links */
+/* 3.4 Portrait */
+.portrait {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.portrait img {
+    object-fit: cover;
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--font-color);
+}
+
+/* 3.5 Social Media Links */
 .socialmedia {
     grid-column: span 1;
     grid-row: span 2;
-    /* border: 1px solid blue; */
 }
 
 .socialmedia ul {
@@ -247,42 +257,27 @@ hr {
     padding: 0;
 }
 
-.socialmedia ul li {
-    margin-bottom: 10px;
+.socialmedia li {
+    margin-bottom: 1em;
 }
 
-.socialmedia ul li a img {
+.socialmedia img {
     height: auto;
-    width: 35px;
+    width: 2em;
     opacity: .75;
     transition: opacity .3s linear 0s;
     -webkit-transition: opacity .3s linear 0s;
     /* Safari */
 }
 
-.socialmedia ul li a img:hover {
+.socialmedia img:hover {
     opacity: 1;
-}
-
-/* 3.5 Portrait */
-.portrait {
-    grid-column: span 1;
-    grid-row: span 2;
-    /* border: 1px solid orange; */
-}
-
-.portrait img {
-    object-fit: cover;
-    max-width: 300px;
-    height: auto;
-    border: 1px solid var(--font-color);
 }
 
 /**** 4. Skills ****/
 
 /* 4.1 General Formatting */
 .skills {
-    padding: 50px;
     text-align: center;
     background-color: var(--base-color-2);
 }
@@ -291,51 +286,46 @@ hr {
     background-color: var(--secondary-1);
 }
 
-/* 4.2 List of Coding Languages */
-.skills .languages {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-    line-height: 50px;
+/* 4.2 Simple Content Layout */
+.skills-content {
+    grid-column: span 12;
 }
 
-.skills .languages li {
-    padding: 0 50px;
+/* 4.3 List of Coding Languages */
+.code-list {
+    grid-column: span 12;
+    list-style: none;
+    padding: 0;
+}
+
+.code-list li {
+    padding: .5em 2em;
     display: inline-block;
     font-weight: bold;
 }
 
-.skills .languages li.inprogress {
+.code-list li.inprogress {
     opacity: .5;
 }
 
-.skills h5 {
+.skills-content h5 {
+    margin: 0;
     text-align: right;
     opacity: .5;
 }
 
-/* 4.3 List of Tools */
-.skills .tools {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    columns: 200px 200px;
+/* 4.4 List of Tools */
+.tools-list {
+    columns: 2;
+    text-align: center;
+    column-width: 50px;
 }
 
 /**** 5. Experience ****/
 
 /* 5.1 General Formatting */
-.experience {
-    padding: 50px;
-    text-align: center;
-}
-
 .experience hr {
     background-color: var(--secondary-2);
-}
-
-.experience .grid-container {
-    grid-row-gap: 100px;
 }
 
 /* 5.2 Base Grid Layout */
@@ -348,7 +338,6 @@ hr {
 .exp-content {
     grid-column: span 6;
     text-align: left;
-    height: auto;
 }
 
 .exp-skills {
@@ -356,34 +345,16 @@ hr {
     text-align: left;
 }
 
-
-.exp-skills h3 {
-    margin-top: 25px;
-}
-
 /* 5.3 Sidebar Formatting */
 .sidebar-picbox {
     height: auto;
-}
-
-#company1 {
-    border-right: 2px solid var(--secondary-1);
-    /* border-right: 2px solid var(--primary-1); */
-}
-
-#company2 {
-    border-right: 2px solid var(--secondary-1);
-    /* border-right: 2px solid var(--secondary-1); */
-}
-
-#company3 {
     border-right: 2px solid var(--secondary-1);
 }
 
 .exp-sidebar .sidebar-picbox img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
+    width: 6.25em;
+    height: 6.25em;
+    margin-right: .625em;
     border-radius: 50%;
 }
 
@@ -396,23 +367,22 @@ hr {
 
 /* 7.1 General Formatting */
 .work {
-    padding: 50px;
-    text-align: center;
-    background-color:var(--base-color-2);
+    background-color: var(--base-color-2);
 }
 
 .work hr {
     background-color: var(--primary-1);
 }
 
+.work-content {
+    grid-column: span 12;
+}
 
 
 /**** 6. Contact Me ****/
 
 /* 6.1 General Formatting */
 .contact {
-    padding: 50px;
-    text-align: center;
     background-color: var(--base-color);
 }
 
@@ -429,10 +399,6 @@ hr {
 .contact-form {
     grid-column: span 6;
     text-align: left;
-}
-
-.contact-form h3 {
-    margin-bottom: 5px;
 }
 
 /* 6.4 Text Outline Animation */
@@ -462,7 +428,7 @@ input:focus {
 }
 
 .txtfield textarea {
-    height: 200px;
+    height: 12.5em;
     vertical-align: top;
     resize: none;
 }
@@ -520,75 +486,52 @@ input:focus~.outline-right {
     transform: scaleY(1);
 }
 
-/**** 7. Current Design Elements ****/
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
 
-/* 7.1 General Formatting */
-.design {
-    text-align: center;
-    padding: 50px;
-}
+    .mission-statement {
+        text-align: left;
+        grid-column: span 6
+    }
 
-.column-grid-container {
-    display: grid;
-    height: 500px;
-    grid-template-rows: 6fr 3fr 2fr 2fr;
-    grid-template-columns: repeat(6, 1fr);
-    background-color: white;
-    grid-column-gap: 25px;
-    padding: 25px;
-}
+    .portrait {
+        grid-row: span 1;
+    }
 
-/* 7.2 Color Palette */
+    .bio {
+        text-align: left;
+        grid-column: span 11;
+        grid-row: 3;
+    }
 
-.palette-base {
-    grid-row: 1;
-    grid-column: span 2;
-}
+    .socialmedia {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .socialmedia ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .socialmedia li {
+        margin-bottom: 1em;
+    }
+    
+    .socialmedia img {
+        height: auto;
+        width: 1.5em;
+    }
 
-.palette-base1 {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    width: 50%;
-    height: 100%;
-    background-color: var(--base-color);
-}
+    .navbar ul li a{
+        display: none;
+    }
 
-.palette-base2 {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    width: 49%;
-    height: 100%;
-    background-color: var(--base-color-2);
-}
-
-.palette-secondary2 {
-    grid-column: span 2;
-    grid-row: 2;
-    background-color: var(--secondary-2);
-}
-
-.palette-secondary1 {
-    grid-column: span 2;
-    grid-row: 3;
-    background-color: var(--secondary-1);
-}
-
-.palette-primary1 {
-    grid-column: span 2;
-    grid-row: 4;
-    background-color: var(--primary-1);
-}
-
-/* 7.3 Typography */
-.typography {
-    text-align: center;
-    grid-column: 3 / span 4;
-    grid-row: span 13;
-    background-color: var(--base-color);
-}
-
-.typography p {
-    font-size: 1.75em;
+    .navbar a.current {
+        display: inline-block;
+        opacity: 1;
+    }
 }
