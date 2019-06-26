@@ -12,7 +12,6 @@
 body,
 html {
     font-family: Open Sans;
-    /* font-size: 12px; */
     margin: 0;
     padding: 0;
     background-color: var(--base-color);
@@ -26,12 +25,22 @@ h3 {
     font-family: Roboto;
 }
 
+.wrapper {
+    overflow: hidden;   
+}
+
 .panel {
     display: grid;
-    padding: 3rem 4rem;
+    padding: 3rem 1rem;
     margin: 0;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 1.5em;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .panel-heading {
@@ -55,13 +64,17 @@ h3 {
 /* 1.1 Container Sizing and Background */
 .home {
     height: 100vh;
+    box-sizing: border-box;
     text-align: center;
 }
 
 .bg-gradient {
     width: 100%;
-    height: 98%;
+    height: 100%;
+    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     background: linear-gradient(to top, var(--secondary-1), darkslateblue);
     animation: fadein 2s ease-out forwards 1.5s;
@@ -75,6 +88,7 @@ h3 {
 
 /* 1.2 Logobox */
 .logobox {
+    grid-column: 5 / span 4;
     width: auto;
     height: auto;
     position: relative;
@@ -89,8 +103,9 @@ h3 {
 }
 
 #home-logo {
-    height: 7.5em;
-    width: 12.5em;
+    height: auto;
+    width: 100%;
+    max-width: 12.5em;
     opacity: 1;
 }
 
@@ -98,7 +113,7 @@ h3 {
 .skyline {
     position: absolute;
     left: 0;
-    bottom: 4em;
+    bottom: 3em;
 }
 
 #skyline-path {
@@ -117,138 +132,135 @@ h3 {
     }
 }
 
+
+
 /**** 2. Navigation Bar ****/
 
 /* 2.1 General - Positioning, Sizing, Stickiness */
-.navbar {
-    width: 100%;
-    height: 4em;
+.nav-bar {
+    margin: 0;
+    padding: 1em;
+    padding-bottom: 0;
     position: absolute;
     bottom: 0px;
+    width: 100%;
+    height: 3em;
     background-color: var(--base-color);
     text-align: center;
     z-index: 10;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.navbar.sticky {
-    position: fixed;
-    top: 0px;
-}
-
-/* 2.2 Navbar Logo */
+/* 2.2 Navbar Logo & Navbar Toggle */
 #nav-logo {
     width: 3.33em;
     height: 2em;
     position: absolute;
-    padding: 1em 0em;
+    top: .5em;
+    left: 1em;
     visibility: hidden;
-    left: 1.2em;
     opacity: 0;
     transition: opacity .3s linear 0s;
     -webkit-transition: opacity .3s linear 0s;
     /* Safari */
 }
 
-.sticky #nav-logo {
+#nav-toggle {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top: .5em;
+    right: 1em;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s linear 0s;
+    -webkit-transition: opacity .3s linear 0s;
+    /* Safari */
+    z-index: 11;
+}
+
+/* 2.3 Navbar Menu & Links */
+
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    opacity: .75;
+    display: none;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.sticky .nav-menu .nav-link.active {
+    margin-bottom: 1em;
+    display: block;
+}
+
+.sticky .nav-menu .nav-link.current {
+    margin-bottom: 1em;
+    display: block;
+    opacity: 1;
+}
+
+/* 2.4 Navbar Stickiness */
+.nav-bar.sticky {
+    position: fixed;
+    top: 0px;
+}
+
+.sticky #nav-logo, .sticky #nav-toggle {
     visibility: initial;
     opacity: .75;
-}
-
-.sticky #nav-logo:hover {
-    opacity: 1;
-}
-
-/* 2.3 Navbar Links */
-.navbar ul {
-    margin: 0 auto;
-    padding: 0;
-    height: 100%;
-    list-style: none;
-}
-
-.navbar ul li {
-    position: relative;
-    padding-top: 1.5em;
-    margin: 0em 1em;
-    height: auto;
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-.navbar ul li a {
-    display: block;
-    text-decoration: none;
-    opacity: .75;
-    color: var(--font-color);
-}
-
-.navbar a.current {
-    opacity: 1;
-}
-
-.navbar a:hover {
-    opacity: 1;
-}
-
-.navbar span {
-    position: absolute;
-    left: 50%;
-    background-color: white;
-    transform: translate(-50%, 0) scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: 1px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.navbar a:hover~span {
-    transform: translate(-50%, 0) scaleX(1);
-    opacity: 1;
 }
 
 /**** 3. About Me ****/
 
 /* 3.1 General Position, Grid Definition */
-.about {
-    margin-bottom: 150px;
-}
-
 .about hr {
     background-color: var(--primary-1);
 }
 
-/* 3.2 Mission Statement */
-.mission-statement {
-    text-align: left;
-    grid-column: span 8;
-}
-
-/* 3.3 Bio */
-.bio {
-    text-align: left;
-    grid-column: span 8;
-    grid-row: 3;
-}
-
-/* 3.4 Portrait */
+/* 3.2 Portrait */
 .portrait {
-    grid-column: span 3;
-    grid-row: span 2;
+    grid-column: 2 / span 10;
 }
 
 .portrait img {
     object-fit: cover;
-    min-width: 150px;
     width: 100%;
     height: auto;
     border: 1px solid var(--font-color);
 }
 
+/* 3.3 Mission Statement */
+.mission-statement {
+    text-align: center;
+    grid-column: span 12;
+}
+
+/* 3.4 Bio */
+.bio {
+    text-align: left;
+    grid-column: span 12;
+}
+
 /* 3.5 Social Media Links */
 .socialmedia {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-column: span 12;
+    text-align: center;
 }
 
 .socialmedia ul {
@@ -258,7 +270,9 @@ h3 {
 }
 
 .socialmedia li {
-    margin-bottom: 1em;
+    display: inline-block;
+    margin: 0.5em .5em;
+    vertical-align: top;
 }
 
 .socialmedia img {
@@ -293,13 +307,12 @@ h3 {
 
 /* 4.3 List of Coding Languages */
 .code-list {
-    grid-column: span 12;
     list-style: none;
     padding: 0;
 }
 
 .code-list li {
-    padding: .5em 2em;
+    padding: .5em .5em;
     display: inline-block;
     font-weight: bold;
 }
@@ -328,39 +341,38 @@ h3 {
     background-color: var(--secondary-2);
 }
 
-/* 5.2 Base Grid Layout */
+/* 5.2 Sidebar & Pic formatting */
 .exp-sidebar {
-    grid-column: span 2;
-    text-align: right;
-    overflow: hidden;
+    position: relative;
+    grid-column: span 3;
+    grid-row: span 2;
+    text-align: center;
 }
 
+.sidebar-line {
+    display:inline-block;
+    width: 2px;
+    height: 100%;
+    background-color: var(--secondary-1);
+}
+
+.sidebar-frame {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 100%;
+    border: 2px solid var(--secondary-1);
+    border-radius: 50%;
+    background-size: cover;
+}
+
+/* 5.3 Sidebar Content */
 .exp-content {
-    grid-column: span 6;
-    text-align: left;
+    grid-column: span 9;
 }
 
 .exp-skills {
-    grid-column: span 4;
-    text-align: left;
-}
-
-/* 5.3 Sidebar Formatting */
-.sidebar-picbox {
-    height: auto;
-    border-right: 2px solid var(--secondary-1);
-}
-
-.exp-sidebar .sidebar-picbox img {
-    width: 6.25em;
-    height: 6.25em;
-    margin-right: .625em;
-    border-radius: 50%;
-}
-
-.exp-sidebar .sidebar-filler {
-    height: 100%;
-    border-right: 2.5px solid var(--font-color);
+    grid-column: span 9;
 }
 
 /**** 6. My Work ****/
@@ -392,12 +404,12 @@ h3 {
 
 /* 6.2 Contact Me Social Media Links */
 .contact-media {
-    grid-column: span 6;
+    grid-column: span 12;
 }
 
 /* 6.3 Contact Me Form */
 .contact-form {
-    grid-column: span 6;
+    grid-column: span 12;
     text-align: left;
 }
 
@@ -486,52 +498,5 @@ input:focus~.outline-right {
     transform: scaleY(1);
 }
 
-@media only screen and (max-width: 768px) {
-    html {
-        font-size: 12px;
-    }
-
-    .mission-statement {
-        text-align: left;
-        grid-column: span 6
-    }
-
-    .portrait {
-        grid-row: span 1;
-    }
-
-    .bio {
-        text-align: left;
-        grid-column: span 11;
-        grid-row: 3;
-    }
-
-    .socialmedia {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-    
-    .socialmedia ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .socialmedia li {
-        margin-bottom: 1em;
-    }
-    
-    .socialmedia img {
-        height: auto;
-        width: 1.5em;
-    }
-
-    .navbar ul li a{
-        display: none;
-    }
-
-    .navbar a.current {
-        display: inline-block;
-        opacity: 1;
-    }
+@media only screen and (max-width: 600px) {
 }

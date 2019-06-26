@@ -14,7 +14,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="home">
+        <div class="home panel">
             <div class="bg-gradient"></div>
             <div class="logobox">
                 <img id="home-logo" src="assets/nklogo.png" alt="My Logo" draggable="false" />
@@ -32,30 +32,35 @@
         </div>
 
 
-        <nav id="nav" class="navbar">
+        <nav id="nav-bar" class="nav-bar">
+            
+            
             <a href="#top"><img id="nav-logo" src="assets/nklogo.png" draggable="false" /></a>
-            <ul>
+            <img id="nav-toggle" src="assets/icon.png">
+
+            <ul id="nav-menu" class="nav-menu">
                 <li>
-                    <a href="#about" class="navlink">ABOUT ME</a>
+                    <a href="#about" class="nav-link">ABOUT ME</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#skills" class="navlink">SKILLS</a>
+                    <a href="#skills" class="nav-link">SKILLS</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#experience" class="navlink">EXPERIENCE</a>
+                    <a href="#experience" class="nav-link">EXPERIENCE</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#work" class="navlink">MY WORK</a>
+                    <a href="#work" class="nav-link">MY WORK</a>
                     <span></span>
                 </li>
                 <li>
-                    <a href="#contact" class="navlink">CONTACT ME</a>
+                    <a href="#contact" class="nav-link">CONTACT ME</a>
                     <span></span>
                 </li>
             </ul>
+            
         </nav>
 
 
@@ -64,7 +69,9 @@
                 <h1>ABOUT ME</h1>
                 <hr />
             </div>
-
+            <div class="portrait">
+                <img src="assets/me.jpg" alt="My Portrait">
+            </div>
             <div class="mission-statement">
                 <h2>I'm passionate about furthering my understanding, and exploring what's possible. It's always
                     exciting to see what the future holds.</h2>
@@ -80,11 +87,6 @@
                     document my own learning process, and the skills I gain along the way. I also hope it will
                     provide guidance and inspiration for other people who are looking to do something similar.</p>
             </div>
-
-            <div class="portrait">
-                <img src="assets/me.jpg" alt="My Portrait">
-            </div>
-
             <div class="socialmedia">
                 <ul>
                     <li>
@@ -112,7 +114,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
 
 
@@ -154,15 +155,11 @@
                 <hr />
             </div>
             <div class="exp-sidebar">
-                <div class="sidebar-picbox">
-                    <a href="https://www.coursento.com/">
-                        <img src="assets/coursentologo.png" alt="Coursento Logo" draggable="false" />
-                    </a>
-                </div>
-                <div class="sidebar-filler"></div>
+                <div class="sidebar-line"></div>
+                <div class="sidebar-frame" style="background-image: url(assets/coursentologo.png);"></div>
             </div>
             <div class="exp-content">
-                <h2>Coursento - Technical University Berlin</h2>
+                <h2>Coursento Technical University Berlin</h2>
                 <h3><i>Intern • Quality Assurance Test Automation</i></h3>
                 <p>Coursento is a start up of the Technical University Berlin. I'm currently working as an intern
                     with their team to help automate the QA process for their website. This mostly involves using
@@ -179,14 +176,9 @@
                     <li>Experience with Web Development Cycle</li>
                 </ul>
             </div>
-
             <div class="exp-sidebar">
-                <div class="sidebar-picbox">
-                    <a href="https://www.rockymountainreserve.com/">
-                        <img src="assets/rmrlogo.png" alt="RMR Logo" draggable="false" />
-                    </a>
-                </div>
-                <div class="sidebar-filler"></div>
+                <div class="sidebar-line"></div>
+                <div class="sidebar-frame" style="background-image: url(assets/rmrlogo.png);"></div>
             </div>
             <div class="exp-content">
                 <h2>Rocky Mountain Reserve</h2>
@@ -206,14 +198,9 @@
                     <li>Getting yelled out without yelling back</li>
                 </ul>
             </div>
-
             <div class="exp-sidebar">
-                <div class="sidebar-picbox">
-                    <a href="https://newsroom.churchofjesuschrist.org/topic/missionary-program">
-                        <img src="assets/churchlogo.png" alt="Church Logo" draggable="false" />
-                    </a>
-                </div>
-                <div class="sidebar-filler"></div>
+                <div class="sidebar-line"></div>
+                <div class="sidebar-frame" style="background-image: url(assets/churchlogo.png);"></div>
             </div>
             <div class="exp-content">
                 <h2>The Church of Jesus Christ of Latter-day Saints</h2>
@@ -315,7 +302,7 @@
         </div>
     </div>
     <script src="js/scrollscripts.js"></script>
-    <!-- <script src="js/textchange.js"></script> -->
+    <script src="js/navbar.js"></script>
 </body>
 
 </html>
