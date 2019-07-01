@@ -35,38 +35,28 @@ h3 {
     font-family: Roboto;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 .wrapper {
     overflow: hidden;
 }
 
-.panel {
-    display: grid;
-    padding: 3rem 1rem;
+.section {
     margin: 0;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1.5em;
+    width: 100%;
 }
 
-.panel-heading {
-    grid-column: span 12;
-    text-align: center;
+.section-wrapper {
+    margin: 0 auto;
+    width: 50rem;
 }
 
-.panel-heading h1 {
-    text-transform: uppercase;
-}
-
-.panel-heading hr {
-    border: none;
-    height: .2em;
-    width: 25%;
-    background-color: white;
-}
-
-/**** 1. Home Page/Top Panel ****/
+/**** 1. Home Page/Top section ****/
 
 /* 1.1 Container Sizing and Background */
-.home {
+.section--home {
     height: 100vh;
     box-sizing: border-box;
     text-align: center;
@@ -145,11 +135,14 @@ h3 {
     margin: 0;
     padding: 1.5em;
     padding-bottom: 0em;
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute;
+    bottom: 0px; */
+    position: fixed;
+    top: 0;
+
     width: 100%;
     height: 4em;
-    background-color: var(--base-color);
+    background-color: rgb(61, 61, 61);
     text-align: center;
     z-index: 10;
 }
@@ -233,36 +226,43 @@ h3 {
 /**** 3. About Me ****/
 
 /* 3.1 General Position, Grid Definition */
-.about hr {
-    background-color: var(--primary-1);
+.section--about {
+    padding: 8em 0 6em 0;
 }
 
-/* 3.2 Portrait */
+/* 3.2 Portrait & Tagline */
+.me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .portrait {
-    grid-column: 2 / span 10;
+    grid-column: 1 / span 1;
 }
 
 .portrait img {
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    border: 1px solid var(--font-color);
+    width: 22.5em;
+    height: 22.5em;
+    border: 3px solid white;
 }
 
-/* 3.3 Mission Statement */
-.mission-statement {
-    text-align: center;
-    grid-column: span 12;
+.tagline {
+    grid-column: 2 / span 1;
+    padding: 1em;
+    background-image: url("../assets/tagline.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font: italic normal 100 2.25em/normal Roboto;
+    
 }
 
 /* 3.4 Bio */
 .bio {
     text-align: left;
-    grid-column: span 12;
 }
 
 /* 3.5 Social Media Links */
-.socialmedia {
+/* .socialmedia {
     grid-column: span 12;
     text-align: center;
 }
@@ -285,98 +285,75 @@ h3 {
     opacity: .75;
     transition: opacity .3s linear 0s;
     -webkit-transition: opacity .3s linear 0s;
-    /* Safari */
 }
 
 .socialmedia img:hover {
     opacity: 1;
-}
+} */
 
 /**** 4. Skills ****/
 
 /* 4.1 General Formatting */
-.skills {
-    text-align: center;
+.section--skills {
+    padding: 6em 0 6em 0;
     background-color: var(--base-color-2);
 }
 
-.skills hr {
-    background-color: var(--secondary-1);
-}
-
 /* 4.2 Simple Content Layout */
-.skills-content {
-    grid-column: span 12;
+.skills {
+    text-align: left;
+    width: 100%;
+    padding-right: 60%;
 }
 
-/* 4.3 List of Coding Languages */
-.code-list {
-    list-style: none;
-    padding: 0;
-}
-
-.code-list li {
-    padding: .5em .5em;
-    display: inline-block;
-    font-weight: bold;
-}
-
-.code-list li.inprogress {
-    opacity: .5;
-}
-
-.skills-content h5 {
-    margin: 0;
+.tools {
     text-align: right;
-    opacity: .5;
-}
-
-/* 4.4 List of Tools */
-.tools-list {
-    columns: 2;
-    text-align: center;
-    column-width: 50px;
+    width: 100%;
+    padding-left: 60%;
 }
 
 /**** 5. Experience ****/
 
 /* 5.1 General Formatting */
-.experience hr {
-    background-color: var(--secondary-2);
+.section--experience {
+    padding: 6em 0 6em 0;
+    background-color: var(--base-color);
 }
 
-/* 5.2 Sidebar & Pic formatting */
-.exp-sidebar {
-    position: relative;
-    grid-column: span 3;
-    grid-row: span 2;
-    text-align: center;
+.company {
+    display: grid;
+    grid-template-columns: 8em auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
-.sidebar-line {
-    display: inline-block;
-    width: 2px;
+.company-pic {
+    height: 8em;
+    width: 8em;
+}
+
+.company-pic img {
     height: 100%;
-    background-color: var(--font-color);
-}
-
-.sidebar-frame {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-top: 100%;
-    border: 2px solid var(--secondary-1);
+    /* border: 3px solid white; */
     border-radius: 50%;
-    background-size: cover;
 }
 
-/* 5.3 Sidebar Content */
-.exp-content {
-    grid-column: span 9;
+.company-name {
+    padding: 3.25em 2em;
 }
 
-.exp-skills {
-    grid-column: span 9;
+.company-name h2{
+    margin: 0;
+}
+
+.jobdesc {
+    padding: 0 0 4em 2em;
+    margin: 0 0 0 4em;
+    border-left: 3px solid white;
+}
+
+.jobdesc h3 {
+    margin-top: 0;
 }
 
 /**** 6. My Work ****/
@@ -508,29 +485,7 @@ input:focus~.outline-right {
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .portrait {
-        grid-column: span 6;
-    }
-
-    .portrait img {
-        max-width: 15em;
-    }
-
-    .mission-statement {
-        text-align: right;
-        grid-column: span 6;
-        grid-row: 2;
-    }
-
-    .exp-sidebar {
-        grid-column: span 2;
-    }
-
-    .exp-content, .exp-skills {
-        grid-column: span 10;
-    }
-} 
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {} 
