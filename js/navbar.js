@@ -1,4 +1,5 @@
-var navBar = document.getElementById('nav-bar');
+var navBar = document.getElementById("nav");
+var navMenu = document.getElementById('nav-menu');
 var navMenuToggle = document.getElementById('nav-toggle');
 var navLinks = document.getElementsByClassName('nav-link');
 
@@ -14,23 +15,15 @@ function stickyNavbar() {
 
 window.addEventListener('scroll', stickyNavbar);
 
-
 //Function for expanding menu with toggle button. For Mobile format
 navMenuToggle.addEventListener('click', function () {
-    navBar.classList.toggle('expanded');
-    for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].classList.toggle('active');
-    }
+    navMenu.classList.toggle('expanded');
 });
+
 
 //Expands menu from current position in middle.
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener('click', function () {
-        navBar.classList.toggle('expanded');
-        for (var j = 0; j < navLinks.length; j++) {
-            navLinks[j].classList.remove('current');
-            navLinks[j].classList.toggle('active');
-        }
-        this.classList.add('current');
+        navMenu.classList.toggle('expanded');
     });
 }

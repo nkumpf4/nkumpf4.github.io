@@ -1,7 +1,7 @@
 window.addEventListener('scroll', trackScroll);
 
 // Get the navbar
-var navbar = document.getElementById("nav-bar");
+var navBar = document.getElementById("nav");
 
 function trackScroll() {
     var navLinks = document.getElementsByClassName("nav-link");

@@ -128,92 +128,104 @@ h1 {
 /**** 2. Navigation Bar ****/
 
 /* 2.1 General - Positioning, Sizing, Stickiness */
-.nav-bar {
-    margin: 0;
-    padding: 1.5em;
-    padding-bottom: 0em;
+#nav {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
+    min-height: 4em;
     width: 100%;
-    height: 4em;
     background-color: var(--base-color);
-    text-align: center;
-    z-index: 10;
+    margin: 0;
+    padding: 0;
+    z-index: 15;
+    border-bottom: 1px solid transparent;
+    transition: all .3s linear 0s;
 }
 
-.nav-bar.expanded {
-    height: 13em;
+#nav.sticky {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
 }
 
-/* 2.2 Navbar Logo & Navbar Toggle */
+/* 2.2 Navbar Logo */
 #nav-logo {
-    width: 3.33em;
-    height: 2em;
     position: absolute;
     top: 1em;
     left: 1em;
     visibility: hidden;
-    opacity: 0;
-    transition: opacity .3s linear 0s;
-    -webkit-transition: opacity .3s linear 0s;
-    /* Safari */
-}
-
-#nav-toggle {
-    width: 2em;
     height: 2em;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    cursor: pointer;
-    visibility: hidden;
+    width: auto;
     opacity: 0;
-    transition: opacity .3s linear 0s;
-    -webkit-transition: opacity .3s linear 0s;
-    /* Safari */
-    z-index: 11;
+    transition: all .3s linear 0s;
 }
 
-/* 2.3 Navbar Menu & Links */
+#nav.sticky #nav-logo {
+    visibility: initial;
+    opacity: .75;
+}
 
-.nav-menu {
-    padding: 0;
-    margin: 0;
+#nav.sticky #nav-logo:hover {
+    opacity: 1;
+}
+
+/* 2.3 Navbar Menu */
+#nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+#nav-menu.expanded .nav-link {
+    display: initial;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: white;
+    margin: 0;
+    padding: 0 1em;
+    line-height: 4em;
+    text-transform: uppercase;
+}
+
+.nav-link a {
+    color: inherit;
     opacity: .75;
+    text-decoration: none;
+}
+
+.nav-link a:hover{
+    opacity: 1;
+}
+
+.nav-link.current a{
+    opacity: 1;
+}
+
+/* 2.4 Navbar Toggle */
+#nav-toggle {
     display: none;
+    position: absolute;
+    visibility: hidden;
+    top: 1em;
+    right: 1em;
+    height: 2em;
+    width: 2em;
+    opacity: 0;
+    transition: all .3s linear 0s;
 }
 
-.nav-link:hover {
-    opacity: 1;
-}
-
-.sticky .nav-menu .nav-link.active {
-    margin-bottom: 1em;
-    display: block;
-}
-
-.sticky .nav-menu .nav-link.current {
-    margin-bottom: 1em;
-    display: block;
-    opacity: 1;
-}
-
-/* 2.4 Navbar Stickiness */
-.nav-bar.sticky {
-    position: fixed;
-    top: 0px;
-}
-
-.sticky #nav-logo,
-.sticky #nav-toggle {
+#nav.sticky #nav-toggle {
     visibility: initial;
     opacity: .75;
+}
+
+#nav.sticky #nav-toggle:hover {
+    opacity: 1;
 }
 
 
@@ -320,7 +332,7 @@ h1 {
     position: relative;
     height: 100%;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 8;
 }
 
 .company h2 {
@@ -481,6 +493,22 @@ input:focus~.outline-right {
     .section-wrapper {
         margin: 0 1em;
         width: auto;
+    }
+
+    #nav-menu {
+        flex-direction: column;
+    }
+
+    #nav-menu .nav-link {
+        display: none;
+    }
+
+    #nav-menu .nav-link.current {
+        display: initial;
+    }
+
+    #nav-toggle{
+        display: initial;
     }
 
     .portrait img {
