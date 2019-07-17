@@ -1,70 +1,40 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-Regular.ttf");
+  font-family: "Source Sans Pro";
+  src: url("Fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-Thin.ttf");
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-ThinItalic.ttf");
-  font-weight: 100;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-Light.ttf");
+  font-family: "Source Sans Pro";
+  src: url("Fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-Bold.ttf");
+  font-family: "Source Sans Pro";
+  src: url("Fonts/Source_Sans_Pro/SourceSansPro-Black.ttf");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("Fonts/roboto/Roboto-BoldItalic.ttf");
-  font-weight: bold;
-  font-style: italic;
+  font-family: "Source Code Pro";
+  src: url("Fonts/Source_Code_Pro/SourceCodePro-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("Fonts/Montserrat/Montserrat-Regular.ttf");
+  font-family: "Barlow";
+  src: url("Fonts/Barlow/Barlow-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("Fonts/Montserrat/Montserrat-Light.ttf");
+  font-family: "Barlow";
+  src: url("Fonts/Barlow/Barlow-Light.ttf");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("Fonts/Montserrat/Montserrat-Bold.ttf");
+  font-family: "Barlow";
+  src: url("Fonts/Barlow/Barlow-Bold.ttf");
   font-weight: bold;
 }
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("Fonts/Open_Sans/OpenSans-Regular.ttf");
-}
 
-@font-face {
-  font-family: "Open Sans";
-  src: url("Fonts/Open_Sans/OpenSans-Light.ttf");
-  font-weight: lighter;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("Fonts/Open_Sans/OpenSans-Bold.ttf");
-  font-weight: bold;
-}

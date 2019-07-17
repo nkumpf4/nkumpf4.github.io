@@ -9,48 +9,42 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-:root {
-
-    --font-color: white;
-    --base-color: #233151;
-    --base-color-2: #2c3e68;
-    --secondary-2: #6960BE;
-    --secondary-1: #F8BBD0;
-    --primary-1: #Fcc176;
-}
-
 body,
 html {
-    font-family: Open Sans;
     margin: 0;
     padding: 0;
-    background-color: var(--base-color);
-    color: var(--font-color);
+    color: white;
+    background-color: #233151;
+    background-image: radial-gradient(rgba(255, 255, 255, .5) 3%, #233151 0);
+    background-position: center;
+    background-size: 2.5rem 2.5rem;
+    font-size: 20px;
+    line-height: 1.9em;
+    font-family: Source Sans Pro, Sans-Serif;
     scroll-behavior: smooth;
 }
 
 h1,
 h2,
 h3 {
-    font-family: Roboto;
-}
-
-h1 {
-    text-transform: uppercase;
+    font-weight: 400;
+    font-family: Barlow, Sans-Serif;
 }
 
 .wrapper {
     overflow: hidden;
+
 }
 
 .section {
-    margin: 0;
     width: 100%;
+    margin: 0;
 }
 
 .section-wrapper {
+    width: 40.2rem;
     margin: 0 auto;
-    width: 50rem;
+    background-color: #233151;
 }
 
 /**** 1. Home Page/Top section ****/
@@ -69,7 +63,7 @@ h1 {
     width: 100%;
     height: 100%;
     opacity: 1;
-    background: linear-gradient(to top, var(--secondary-1), darkslateblue);
+    background: linear-gradient(to top, #f8bbd0, darkslateblue);
     animation: fadein 2s ease-out forwards 1.5s;
 }
 
@@ -82,22 +76,22 @@ h1 {
 /* 1.2 Logobox */
 .logobox {
     position: relative;
-    top: 7rem;
+    top: 5rem;
     width: 100%;
     text-align: center;
 }
 
 .logobox p {
-    font-family: Roboto;
     font-size: 1.5em;
     font-weight: 100;
+    font-family: Barlow;
     text-transform: uppercase;
 }
 
 #home-logo {
-    height: auto;
     width: 100%;
-    max-width: 12.5em;
+    max-width: 10em;
+    height: auto;
     opacity: 1;
 }
 
@@ -109,8 +103,8 @@ h1 {
 }
 
 #skyline-path {
-    fill: var(--base-color);
-    stroke: var(--font-color);
+    fill: #233151;
+    stroke: white;
     stroke-width: 5px;
     stroke-dasharray: 0 70000;
     stroke-dashoffset: -3200;
@@ -131,14 +125,14 @@ h1 {
 #nav {
     position: absolute;
     bottom: 0;
-    min-height: 4em;
     width: 100%;
-    background-color: var(--base-color);
+    min-height: 3.5em;
     margin: 0;
     padding: 0;
-    z-index: 15;
+    background-color: #233151;
     border-bottom: 1px solid transparent;
     transition: all .3s linear 0s;
+    z-index: 15;
 }
 
 #nav.sticky {
@@ -153,11 +147,11 @@ h1 {
     position: absolute;
     top: 1em;
     left: 1em;
-    visibility: hidden;
-    height: 2em;
     width: auto;
+    height: 1.5em;
+    visibility: hidden;
     opacity: 0;
-    transition: all .3s linear 0s;
+    transition: all .3s ease-in-out 0s;
 }
 
 #nav.sticky #nav-logo {
@@ -174,10 +168,10 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    list-style-type: none;
-    text-align: center;
     margin: 0;
     padding: 0;
+    text-align: center;
+    list-style-type: none;
 }
 
 
@@ -186,9 +180,10 @@ h1 {
 }
 
 .nav-link {
-    margin: 0;
-    padding: 0 1em;
-    line-height: 4em;
+    position: relative;
+    margin: 0 .75em;
+    padding: 0 0;
+    line-height: 3.5em;
     text-transform: uppercase;
 }
 
@@ -198,25 +193,46 @@ h1 {
     text-decoration: none;
 }
 
-.nav-link a:hover{
+.nav-link a::before {
+    content: "";
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link a:hover {
     opacity: 1;
 }
 
-.nav-link.current a{
+.nav-link a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.nav-link.current a {
     opacity: 1;
 }
 
 /* 2.4 Navbar Toggle */
 #nav-toggle {
-    display: none;
     position: absolute;
-    visibility: hidden;
     top: 1em;
     right: 1em;
-    height: 2em;
-    width: 2em;
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    visibility: hidden;
     opacity: 0;
-    transition: all .3s linear 0s;
+    transition: all .3s ease-in-out 0s;
 }
 
 #nav.sticky #nav-toggle {
@@ -233,14 +249,14 @@ h1 {
 
 /* 3.1 General Formatting */
 .section--about {
-    padding: 8em 0 6em 0;
+    padding: 6.4em 0 4.8em 0;
 }
 
 /* 3.2 Portrait & Tagline */
 .me {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .portrait {
@@ -248,18 +264,15 @@ h1 {
 }
 
 .portrait img {
-    width: 22.5em;
-    height: 22.5em;
+    width: 18em;
+    height: 18em;
     border: 3px solid white;
 
 }
 
 .tagline {
     padding: .75em .75em;
-    /* background-image: url("../assets/tagline.png");
-    background-size: contain;
-    background-repeat: no-repeat; */
-    font: italic normal 100 2.25em/normal Roboto;
+    font: italic normal 100 1.8em/normal Source Sans Pro;
 }
 
 /* 3.3 Bio */
@@ -272,24 +285,30 @@ h1 {
 
 /* 4.1 General Formatting & Background*/
 .section--skills {
-    padding: 6em 0 6em 0;
-    background-color: var(--base-color-2);
+    padding: 4.8em 0 4.8em 0;
+    background-color: #2c3e68;
     background-image: url("../assets/skillsbg.png");
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+.section--skills .section-wrapper {
+    background-color: transparent;
 }
 
 /* 4.2 Skills & Tools Layout */
 .skills {
     width: 100%;
-    padding-right: 60%;
+    padding-right: 50%;
     text-align: left;
 }
 
+
+
 .tools {
     width: 100%;
-    padding-left: 60%;
+    padding-left: 50%;
     text-align: right;
 }
 
@@ -298,8 +317,8 @@ h1 {
 
 /* 5.1 General Formatting */
 .section--experience {
-    padding: 6em 0 0 0;
-    background-color: var(--base-color);
+    padding: 5rem 0 0 0;
+    background-color: transparent;
     overflow: hidden;
 }
 
@@ -309,8 +328,8 @@ h1 {
 
 .line {
     position: absolute;
-    top: 6em;
-    left: 4em;
+    top: 5rem;
+    left: 3rem;
     width: 3px;
     height: 100%;
     background-color: white;
@@ -324,8 +343,8 @@ h1 {
 }
 
 .company-pic {
-    width: 8em;
-    height: 8em;
+    width: 6rem;
+    height: 6rem;
 }
 
 .company-pic img {
@@ -336,14 +355,14 @@ h1 {
 }
 
 .company h2 {
-    padding: 0em 1em;
+    padding: 0em 1.25rem;
     margin: 0;
 }
 
 
 /* 5.3 Job Description */
 .jobdesc {
-    padding: 0 0 6em 6em;
+    padding: 0 0 4.5rem 5rem;
 }
 
 .jobdesc h3 {
@@ -355,10 +374,45 @@ h1 {
 
 /* 6.1 General Formatting */
 .section--work {
-    padding: 6em 0 6em 0;
-    background-color: var(--base-color-2);
+    padding: 5rem 0 5rem 0;
+    background-color: #2c3e68;
 }
 
+.section--work .section-wrapper {
+    background-color: transparent;
+}
+
+/* 6.2 Card Container */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 12.5rem 12.5rem;
+    grid-gap: .2rem;
+    background-color: white;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+
+.card {
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e68;
+    text-align: center;
+}
+
+.card svg {
+    width: 5rem;
+    height: auto;
+}
+
+.card:hover {
+    color: #2c3e68;
+    background-color: white;
+}
+
+.card:hover svg {
+    fill: #2c3e68;
+}
 
 /**** 7. Contact Me ****/
 
@@ -367,99 +421,149 @@ h1 {
     padding: 6em 0 6em 0;
 }
 
-/* 7.2 Contact Me Form */
-.contact-form {
-    grid-column: span 12;
-    text-align: left;
-}
-
-/* 7.3 Text Outline Animation */
-.txtfield {
-    position: relative;
-    margin: 0;
+/* 7.? Social Media Links */
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
     padding: 0;
-    overflow: hidden;
-}
-
-.txtfield textarea,
-.txtfield input {
     margin: 0;
-    padding: .35em .45em;
-    width: 100%;
-    color: white;
-    background-color: var(--base-color-2);
-    border: 2px solid transparent;
-    box-sizing: content-box;
-    font-family: inherit;
+    list-style: none;
+
 }
 
-.txtfield textarea:focus,
-input:focus {
+.social-media li a img {
+    width: 2.5rem;
+    opacity: .5;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.social-media li a img:hover {
+    opacity: 1;
+}
+
+.social-media li.inactive a img:hover {
+    opacity: .5;
+}
+
+/* 7.2 Contact Me Form */
+label {
+    display: block;
+    margin: 1rem 0;
+    font-size: 1.17em;
+    font-family: Barlow;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: white;
+    opacity: .5;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    height: 2rem;
+    padding: .5rem .5rem;
+    color: white;
+    background-color: #2c3e68;
+    border: 2px solid transparent;
     outline: none;
 }
 
-.txtfield textarea {
-    height: 12.5em;
-    vertical-align: top;
+textarea {
+    height: 15rem;
     resize: none;
 }
 
-.txtfield span {
+/* 7.3 Text Outline Animation */
+.outline {
+    position: relative;
+    width: 100%;
+}
+
+.outline:before {
+    content: "";
     position: absolute;
-    background-color: white;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-
-.outline-bottom,
-.outline-top {
-    left: 0;
-    right: 0;
-    height: 1px;
+    top: 2.9rem;
+    width: 100%;
+    height: 2rem;
+    visibility: hidden;
+    background-color: transparent;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    -webkit-transform: scaleX(0);
     transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.outline-left,
-.outline-right {
-    top: 0;
-    bottom: 0;
-    width: 1px;
+.outline:after {
+    content: "";
+    position: absolute;
+    top: 2.9rem;
+    width: 100%;
+    height: 2rem;
+    visibility: hidden;
+    background-color: transparent;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    box-sizing: border-box;
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.outline-top {
-    top: 0;
+.outline--large:before,
+.outline--large:after {
+    height: 15rem;
 }
 
-.outline-bottom {
-    bottom: 0;
-}
-
-.outline-left {
-    left: 0;
-}
-
-.outline-right {
-    right: 0;
-}
-
-textarea:focus~.outline-top,
-textarea:focus~.outline-bottom,
-input:focus~.outline-top,
-input:focus~.outline-bottom {
+.outline:focus-within:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-textarea:focus~.outline-left,
-textarea:focus~.outline-right,
-input:focus~.outline-left,
-input:focus~.outline-right {
+.outline:focus-within:after {
+    visibility: visible;
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
+}
+
+/* 7.4 Submit & Reset Buttons */
+input[type=submit],
+input[type=reset] {
+    width: 7.5rem;
+    margin: 1rem .5rem 0 0;
+    padding: .5rem 0;
+    color: white;
+    background-color: #2c3e68;
+    border: none;
+    outline: none;
+    font-family: Barlow;
+}
+
+input[type=reset] {
+    color: #8b9fac;
+}
+
+input[type=submit]:active {
+    color: #233151;
+    background-color: white;
+}
+
+input[type=reset]:active {
+    color: #233151;
+    background-color: #8b9fac;
 }
 
 @media only screen and (max-width: 1100px) {
     .section-wrapper {
-        width: 35rem;
+        width: 30.2rem;
     }
 
     .me {
@@ -469,34 +573,46 @@ input:focus~.outline-right {
     .skills {
         padding-right: 50%;
     }
-    
+
     .tools {
         padding-left: 50%;
     }
 
     .company-pic {
-        width: 6em;
-        height: 6em;
+        width: 5rem;
+        height: 5rem;
     }
 
     .line {
-        left: 3em;
+        left: 2.5rem;
     }
 
     .jobdesc {
-        padding: 0 0 6em 5em;
-    } 
+        padding: 0 0 5rem 4rem;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 680px) {
+
+    html,
+    body {
+        font-size: 18px;
+        line-height: 1.9em;
+    }
+
     .section-wrapper {
         margin: 0 1em;
         width: auto;
     }
 
+    #home-logo {
+        max-width: 7.5rem;
+    }
+
     #nav-menu {
         flex-direction: column;
+        align-items: center;
     }
 
     #nav-menu .nav-link {
@@ -507,7 +623,7 @@ input:focus~.outline-right {
         display: initial;
     }
 
-    #nav-toggle{
+    #nav-toggle {
         display: initial;
     }
 
@@ -522,7 +638,7 @@ input:focus~.outline-right {
         padding: 0;
         text-align: left;
     }
-    
+
     .tools {
         width: 100%;
         padding: 0;
@@ -531,5 +647,19 @@ input:focus~.outline-right {
 
     .tagline {
         padding: .75em 0em;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10rem 10rem 10rem;
+    }
+
+    .card h2 {
+        font-size: 1.17rem;
+    }
+
+    .card svg {
+        width: 4rem;
+        height: auto;
     }
 }
