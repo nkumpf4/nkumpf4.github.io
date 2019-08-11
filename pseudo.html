@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animating Underlines & Outlines Using Pseudo-Classes - Noah Kumpf</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+</head>
+
+<body>
+    <section class="section section--top">
+        <div class="top-wrapper">
+            <span>Animating Underlines & Outlines Using Pseudo-classes</span>
+        </div>
+    </section>
+
+    <section class="section section--content">
+        <div class="text-wrapper">
+            <p>
+                As I was first designing my site, I stumbled upon tons of simple animation galleries, complete with
+                CSS/HTML snippets that you could copy and paste into your design. One of these was a simple underline
+                animation when you hover over text that I thought was pretty sweet. (Feel free to check out <a
+                    href="https://cssfx.dev/">CSSFX</a>, they have a lot of great animations). I quickly added it in to
+                my own site, and didn't give it much more thought.
+            </p>
+            <p>
+                A while later, I read a cool post from <a
+                    href="https://tobiasahlin.com/blog/css-trick-animating-link-underlines/">Tobias Ahlin</a> about
+                creating this same effect using pseudo-classes. I liked this solution a lot more, because it kept the
+                HTML markup minimal and all the styling was done in CSS, which was just way cleaner. I'd recommend
+                checking his post out cause it's a super good example, and is what led me to experimenting with this in
+                the first place.
+            </p>
+            <h1>Why Pseudo-classes?</h1>
+            <p>
+                All of this made me want to learn a little more about pseudo-classes. I'm not big on using code I don't
+                understand, so I got to googling. Pseudo-classes are used to interact with elements that are in a
+                certain state. Most are familiar with <code>:visited</code> or <code>:hover</code>, which are
+                pseudo-classes used in almost every website to style links. Other sites might use
+                <code>:first-child</code> to adjust the margins on the first element in a container. In general,
+                pseudo-classes allow you to be more specific with your styling.
+            </p>
+            <p>
+                There are also pseudo-elements (the ones with the double colon), which are a related concept and are used
+                similarly, albeit there are some technical differences. While pseudo-classes help you select elements
+                that are in a specific state, pseudo-elements "add" new virtual elements that didn't exist before. This
+                nuance is actually what makes our animations possible, so I figured it was worth mentioning.
+            </p>
+            <p>
+                We're primarily interested in <code>::before</code> and <code>::after</code>. Both of these have a
+                <code>content</code> property which, as you could guess, indicates the content of our
+                pseudo-element. This is how we define what should be added to our page. For example, you might use
+                <code>::before</code> and <code>content: url('img.jpg')</code> to add an image before every heading. Or
+                you might use it in order to add some fancy styled quotation marks to each of your quotes. The important
+                thing is that it doesn't require any added HTML.
+            </p>
+        </div>
+
+        <div class="display-wrapper">
+            <img src="assets/example1.png" alt="Example">
+        </div>
+
+        <div class="text-wrapper">
+            <p>
+                This is why Tobias Ahlin's solution was so great! Instead of needing to add a <code>&lt;span&gt;</code>
+                before everything we want to underline, we can just modify <code>::before</code> so that it adds it in
+                for us. Simply set <code>content: ""</code>, adjust the size and positioning, and you're good to go.
+                Again go check out his post <a
+                    href="https://tobiasahlin.com/blog/css-trick-animating-link-underlines/">here</a> to see all of this
+                in action.
+            </p>
+        </div>
+        <div class="text-wrapper">
+            <p>
+                At this point I was pretty stoked, and wanted to see how else I could use this. So I went on to try and
+                use it for an animation outlining my input boxes. This was another one I picked up from <a
+                    href="https://cssfx.dev/">CSSFX</a>, but their solution required adding four
+                <code>&lt;span&gt;</code> tags for every input box. (The perfect chance to cut down on some HTML that
+                was purely there for style). Unfortunately I ran into some limitations.
+            </p>
+            <h1>The Problems</h1>
+            <p>
+                1) The main issue was that because <code>::before</code> and <code>::after</code> add content to an
+                element, they can only be used on container elements, such as a <code>&lt;div&gt;</code>. You can't add
+                anything "before" or "after" something's contents if it doesn't have any. In our case
+                <code>&lt;input&gt;</code> is not a container element.
+            </p>
+            <p>
+                2) The second problem was that <code>::before</code> and <code>::after</code> are the only
+                pseudo-elements that have the <code>content</code> property, meaning I had to replace all four outlines
+                using two elements.
+            </p>
+            <p>
+                Luckily these problems weren't too difficult to solve. From what I could tell, the only way around the
+                first issue was to add in a container element to use for the styling. This wasn't ideal, but it was much
+                cleaner than four spans, and still kept the semantics of the input tags. As for there only being two
+                elements to work with, I realized that the top and bottom borders could be animated together, as well as
+                the left and right. In the end, this is simply a limitation of pseudo-elements, but with some
+                creativity, you should be able to get around almost any problems you have.
+            </p>
+        </div>
+        <div class="display-wrapper">
+            <p class="codepen" data-height="300" data-theme-id="0" data-default-tab="html,result" data-user="nkumpf4"
+                data-slug-hash="JgYgdR"
+                style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+                data-pen-title="Input Outline w/ Pseudo-classes">
+                <span>See the Pen <a href="https://codepen.io/nkumpf4/pen/JgYgdR/">
+                        Input Outline w/ Pseudo-classes</a> by Noah Kumpf (<a
+                        href="https://codepen.io/nkumpf4">@nkumpf4</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <div class="text-wrapper">
+            <p>Here's a working example.</p>
+
+            <p>
+                There are some important things to note about this implementation. As you can see, each input box gets
+                it's own container. Make sure you set <code>display: inline-block;</code> or else you'll end up with
+                outlines that are going across the entire page. You'll need to include <code>box-sizing:
+                    border-box;</code> in order for the borders to line up correctly. Also, as in Tobias's
+                example, we include <code>visibility: hidden;</code> for browsers that don't support CSS animations.
+                Finally, we make use of the <code>:focus-within</code> pseudo-class in order to animate our outline.
+                This is because focus goes on the input element when selected, and not on our container element. It's
+                also worth mentioning that you can chain pseudo-class selectors just like you would with normal classes.
+            </p>
+
+
+            <p>People have gotten pretty creative with <code>:before</code> and <code>:after</code>, and I think they
+                can be pretty powerful tools once you better understand how they work.</p>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

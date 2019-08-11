@@ -1,0 +1,73 @@
+/**** 0. Main Document Layout ****/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 3%, white 0);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 2.5rem 2.5rem;
+    font-size: 20px;
+    line-height: 1.9em;
+    font-family: Source Sans Pro, Sans-Serif;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    font-family: Barlow;
+}
+
+.section {
+    margin: 0;
+    width: 100%;
+}
+
+a:link, a:hover, a:visited {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+code {
+    font-family: Source Code Pro;
+    font-size: .8em;
+    padding: .1em .3em;
+    background-color: gainsboro;
+    border-radius: 2px;
+    tab-size: 4;
+}
+
+/* 1. Post Title & Header */
+
+/* 1.1 General Formatting */
+
+.section--top {
+    height: 31rem;
+    background-color: #233151;
+}
+
+.top-wrapper {
+    height: 100%;
+    text-align: center;
+}
+
+
+
+

@@ -99,7 +99,7 @@ h3 {
 .skyline {
     position: absolute;
     left: 0;
-    bottom: 4em;
+    bottom: 3em;
 }
 
 #skyline-path {
@@ -193,7 +193,7 @@ h3 {
     text-decoration: none;
 }
 
-.nav-link a::before {
+.nav-link a:before {
     content: "";
     position: absolute;
     top: 2.5em;
@@ -388,8 +388,6 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 12.5rem 12.5rem;
     grid-gap: .2rem;
-    background-color: white;
-    box-sizing: content-box;
     overflow: hidden;
 }
 

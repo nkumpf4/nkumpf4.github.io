@@ -14,7 +14,8 @@ html {
     margin: 0;
     padding: 0;
     color: black;
-    background-image: radial-gradient(rgba(0, 0, 0, .8) 3%, white 0);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2) 3%, white 0);
+    background-attachment: fixed;
     background-position: center;
     background-size: 2.5rem 2.5rem;
     font-size: 20px;
@@ -33,6 +34,24 @@ h3 {
 .section {
     margin: 0;
     width: 100%;
+}
+
+a:link, a:hover, a:visited {
+    text-decoration: underline;
+    color: black;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+code {
+    font-family: Source Code Pro;
+    font-size: .8em;
+    padding: .1em .3em;
+    background-color: gainsboro;
+    border-radius: 2px;
+    tab-size: 4;
 }
 
 /* 1. Post Title & Header */
@@ -73,22 +92,31 @@ h3 {
 .display-wrapper {
     margin: 0 auto;
     width: 45.2rem; 
-    height: 16em;
-    background-color: gainsboro;
+}
+
+.display-wrapper img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #2c3e68;
 }
 
 .codeblock {
     width: 100%;
     padding: 1rem 0;
-    background-color: powderblue;
+    background-color: gainsboro;
 }
 
 .codeblock .text-wrapper {
     background-color: transparent;
 }
 
-.codeblock .text-wrapper code {
-    font-family: Source Code Pro;
-    font-size: .85rem;
+.codeblock .text-wrapper pre {
+    line-height: 1;
 }
+
+.codeblock .text-wrapper pre code{
+    background-color: transparent;
+}
+
+
 
