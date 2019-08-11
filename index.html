@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,315 +8,387 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="wrapper">
-        <section id="home" class="section section--home">
-            <div class="section-wrapper">
-                <div class="bg-gradient"></div>
-                <div class="logobox">
-                    <img id="home-logo" src="assets/nklogo.svg" alt="My Logo" draggable="false" />
-                    <p>Noah Kumpf</p>
-                </div>
-                <!-- <svg class="skyline" viewBox="0 0 5967 400" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-                    <g transform="matrix(1,0,0,1,0,-2245.8)">
-                        <path
-                            d="M0.647,2488.62L90.191,2492.77L175.521,2495.8L264.516,2488.96L370.947,2469.48L465.287,2443.79L503.56,2425.47L654.054,2372.78L795.065,2330.14L889,2307.36L941.511,2309.51L1000.96,2331.65L1058.96,2334.92L1072.67,2347.46L1084.16,2340.61L1112.37,2350.97L1136.12,2345.44L1157.31,2365.49L1197.41,2362.87L1222.64,2378.25L1238.93,2380.09L1368,2467L1511.17,2463.94L1638.87,2466.2L1694,2450L1744.36,2451.99L1790.32,2441.25L1893.82,2472.17L2012.97,2413.01L2130.75,2363.69L2243.51,2321.7L2281.08,2349.74L2328.84,2363.86L2349.33,2363.9L2398.75,2395.24L2435.14,2427.77L2493.55,2432.69L2531.25,2411.27L2552.59,2405.44L2560.36,2412.32L2576.92,2395.73L2608.99,2395.24L2626.27,2379.57L2652.49,2371.45L2685.84,2386.18L2717.89,2377.61L2750.8,2385.05L2766.37,2399.99L2776.87,2401.06L2808.16,2420.98L2837.23,2409.32L2849.1,2419.64L2931.42,2408.35L3002.05,2413.01L3034.61,2401.57L3053.07,2402.58L3095.63,2396.08L3145.74,2370.65L3183.98,2360.46L3205.76,2338.02L3217.14,2335.2L3229.04,2320.14L3241.06,2327.69L3272.75,2307.67L3312.35,2329.54L3370.5,2369.32L3381.82,2365.49L3403.36,2371.7L3427.12,2371.45L3487.53,2390.42L3532.76,2390.6L3547.07,2385.97L3577.25,2389.76L3621.29,2379.58L3653.94,2377.86L3690.56,2369.75L3722.61,2369.96L3765.03,2356.14L3805.06,2337.4L3847.6,2320.14L3890.3,2329.23L3932.95,2350.34L3955.59,2359.51L3989.36,2375.34L4036.56,2347.83L4087.56,2321.54L4140.55,2301.25C4142.56,2301.25 4206.32,2289.47 4206.32,2289.47L4298.19,2248.12L4348.67,2266.28L4447.68,2328.73L4533.21,2389.72L4642.36,2457.58L4678.4,2468.73L4691.34,2478.18L4745.15,2481.02L4779.63,2492.34L4869.7,2492.84L4952.4,2478.72L5026.05,2454.3L5126.01,2401.57L5202.43,2369.7L5299.73,2359.74L5339.34,2378.57L5400.75,2388.45L5413.25,2382.62L5502.52,2392.09L5541.51,2405.14L5614.03,2399.05L5686.97,2400.59L5736.57,2415.98L5789.04,2425.82L5891.52,2451.86L5967,2476.33L5967,2900L0,3200"
-                            id="skyline-path" />
-                    </g>
-                </svg> -->
+      <section id="home" class="section section--home">
+        <div class="section-wrapper">
+          <div class="bg-gradient"></div>
+          <div class="logobox">
+            <img
+              id="home-logo"
+              src="assets/nklogo.svg"
+              alt="My Logo"
+              draggable="false"
+            />
+            <p>Noah Kumpf</p>
+          </div>
+        </div>
+      </section>
+
+      <nav id="nav">
+        <a href="#home">
+          <img id="nav-logo" src="assets/nklogo.svg" alt="" />
+        </a>
+        <ul id="nav-menu">
+          <li class="nav-link">
+            <a href="#about">About Me</a>
+          </li>
+          <li class="nav-link">
+            <a href="#skills">Skills</a>
+          </li>
+          <li class="nav-link">
+            <a href="#experience">Experience</a>
+          </li>
+          <li class="nav-link">
+            <a href="#work">My Work</a>
+          </li>
+          <li class="nav-link">
+            <a href="#contact">Contact Me</a>
+          </li>
+        </ul>
+        <img id="nav-toggle" src="assets/icon.png" alt="" />
+      </nav>
+
+      <section id="about" class="section section--about ">
+        <div class="section-wrapper">
+          <div class="me">
+            <div class="portrait">
+              <img src="assets/me.jpg" alt="Me" />
             </div>
-        </section>
+            <div class="tagline">
+              "I'm passionate about furthering my understanding, and exploring
+              what's possible. It's always exciting to see what the future
+              holds."
+            </div>
+          </div>
+          <div class="bio">
+            <h1>About Me</h1>
+            <p>
+              My name is Noah Kumpf. I currently study at Brigham Young
+              University Provo majoring in Computer Science and German Studies.
+              I love what I study, and am grateful for the chance that I have to
+              learn at the university. That being said, I've also come to
+              realize the importance of self-teaching and the value of "learning
+              by doing".
+            </p>
 
+            <p>
+              I created this website from scratch as my first step in that
+              endeavour. I want to use it to document my own learning process,
+              and the skills I gain along the way. I also hope it will provide
+              guidance and inspiration for other people who are looking to do
+              something similar.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <nav id="nav">
-            <a href="#home">
-                <img id="nav-logo" src="assets/nklogo.svg" alt="" />
-            </a>
-            <ul id="nav-menu">
-                <li class="nav-link">
-                    <a href="#about">About Me</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#skills">Skills</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#experience">Experience</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#work">My Work</a>
-                </li>
-                <li class="nav-link">
-                    <a href="#contact">Contact Me</a>
-                </li>
+      <section id="skills" class="section section--skills">
+        <div class="section-wrapper">
+          <div class="skills">
+            <h1>Skills</h1>
+            <p>
+              I learned to code using C/C++, and still consider that to be my
+              strong suit. That being said, I think learning plays an enormous
+              role in development. I'm currently trying to broaden my skills
+              with Reactnative, Javascript, and Python.
+            </p>
+          </div>
+          <div class="tools">
+            <h1>Tools</h1>
+            <p>
+              In any tech field, the tools you use are as important, if not more
+              important than the actual skills you have. The right program,
+              language, or library can completely change your project. So far,
+              I've learned to work with basic development tools such as Git,
+              Androidstudio, Commandline, as well as common design tools like
+              Adobe Illustrator and Photoshop.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section section--experience">
+        <div id="wrapper--experience" class="section-wrapper">
+          <h1>Experience</h1>
+          <div class="company">
+            <div class="company-pic">
+              <img src="assets/coursentologo.png" alt="" />
+            </div>
+            <h2>Coursento Technical University Berlin</h2>
+          </div>
+          <div class="jobdesc">
+            <h3><i>Intern • Quality Assurance Test Automation</i></h3>
+            <p>
+              Coursento is a start up of the Technical University Berlin. I'm
+              currently working as an intern with their team to help automate
+              the QA process for their website. This mostly involves using
+              testing software to create scripts that check common user
+              interactions with the site, such as logging in, searching,
+              purchasing courses, etc. This is a part time internship so the
+              goal is to create tests that they can continue to use in their
+              development after I've returned to the US.
+            </p>
+            <h3>Skills Learned</h3>
+            <ul>
+              <li>Fundamentals of QA Automation</li>
+              <li>Visual Basic Script</li>
+              <li>Experience with Web Development Cycle</li>
             </ul>
-            <img id="nav-toggle" src="assets/icon.png" alt="">
-        </nav>
+          </div>
 
-
-        <section id="about" class="section section--about ">
-            <div class="section-wrapper">
-                <div class="me">
-                    <div class="portrait">
-                        <img src="assets/me.jpg" alt="Me" />
-                    </div>
-                    <div class="tagline">
-                        "I'm passionate about furthering my understanding, and exploring what's possible. It's always
-                        exciting to see what the future holds."
-                    </div>
-                </div>
-                <div class="bio">
-                    <h1>About Me</h1>
-                    <p>My name is Noah Kumpf. I currently study at Brigham Young University Provo majoring in Computer
-                        Science
-                        and German Studies. I love what I study, and am grateful for the chance that I have to learn at
-                        the university. That being said, I've also come to realize the importance of self-teaching and
-                        the value of "learning by doing".</p>
-
-                    <p> I created this website from scratch as my first step in that endeavour. I want to use it to
-                        document my own learning process, and the skills I gain along the way. I also hope it will
-                        provide guidance and inspiration for other people who are looking to do something similar.</p>
-                </div>
+          <div class="company">
+            <div class="company-pic">
+              <img src="assets/rmrlogo.png" alt="" />
             </div>
-        </section>
+            <h2>Rocky Mountain Reserve</h2>
+          </div>
+          <div class="jobdesc">
+            <h3>
+              <i
+                >Customer Service Representative • Health Plan Administration</i
+              >
+            </h3>
+            <p>
+              I worked part time at RMR for two years while studying at BYU. I
+              dealt directly with employees from over 800 companies on a daily
+              basis. We were the first contact for any questions they had. Much
+              of our work involved troubleshooting the website or software that
+              participants were using, which helped me gain a unique perspective
+              on User Experience and Interface Design. I also trained new
+              employees in using company software and benefit plan logistics.
+            </p>
+            <h3>Skills Learned</h3>
+            <ul>
+              <li>Troubleshooting UI Issues</li>
+              <li>Training/Leadership Skills</li>
+              <li>Custom Service Skills</li>
+            </ul>
+          </div>
 
-
-        <section id="skills" class="section section--skills">
-            <div class="section-wrapper">
-                <div class="skills">
-                    <h1>Skills</h1>
-                    <p>I learned to code using C/C++, and still consider that to be my strong suit. That being said, I
-                        think learning plays an enormous role in development. I'm currently trying to broaden my skills
-                        with Reactnative, Javascript, and Python.</p>
-                </div>
-                <div class="tools">
-                    <h1>Tools</h1>
-                    <p>In any tech field, the tools you use are as important, if not more important than the actual
-                        skills you have. The right program, language, or library can completely change your project. So
-                        far, I've learned to work with basic development tools such as Git, Androidstudio, Commandline,
-                        as well as common design tools like Adobe Illustrator and Photoshop.</p>
-                </div>
+          <div class="company">
+            <div class="company-pic">
+              <img src="assets/churchlogo.png" alt="" />
             </div>
-        </section>
+            <h2>The Church of Jesus Christ of Latter-day Saints</h2>
+          </div>
+          <div class="jobdesc">
+            <h3><i>Full Time Volunteer</i></h3>
+            <p>
+              I spent two years as a volunteer for the Church of Jesus Christ,
+              living in various cities throughout central Germany. I worked an
+              average of 80 hours a week supporting local members, organizing
+              events, and teaching individuals and familes principles of
+              self-reliance, physical-health, and language/communication. I also
+              helped supervise groups of 8-10 other mission volunteers.
+            </p>
+            <h3>Skills Learned</h3>
+            <ul>
+              <li>German & Spanish Fluency</li>
+              <li>Leadership Skills</li>
+              <li>Working with Various Cultures</li>
+            </ul>
+          </div>
 
+          <div class="line"></div>
+        </div>
+      </section>
 
-        <section id="experience" class="section section--experience">
-            <div id="wrapper--experience" class="section-wrapper">
-
-                <h1>Experience</h1>
-                <div class="company">
-                    <div class="company-pic">
-                        <img src="assets/coursentologo.png" alt="">
-                    </div>
-                    <h2>Coursento Technical University Berlin</h2>
-                </div>
-                <div class="jobdesc">
-                    <h3><i>Intern • Quality Assurance Test Automation</i></h3>
-                    <p>Coursento is a start up of the Technical University Berlin. I'm currently working as an intern
-                        with their team to help automate the QA process for their website. This mostly involves using
-                        testing software to create scripts that check common user interactions with the site, such as
-                        logging in, searching, purchasing courses, etc. This is a part time internship so the goal is to
-                        create tests that they can continue to use in their development after I've returned to the US.
-                    </p>
-                    <h3>Skills Learned</h3>
-                    <ul>
-                        <li>Fundamentals of QA Automation</li>
-                        <li>Visual Basic Script</li>
-                        <li>Experience with Web Development Cycle</li>
-                    </ul>
-                </div>
-
-                <div class="company">
-                    <div class="company-pic">
-                        <img src="assets/rmrlogo.png" alt="">
-                    </div>
-                    <h2>Rocky Mountain Reserve</h2>
-                </div>
-                <div class="jobdesc">
-                    <h3><i>Customer Service Representative • Health Plan Administration</i></h3>
-                    <p>I worked part time at RMR for two years while studying at BYU. I dealt directly with employees
-                        from over 800 companies on a daily basis. We were the first contact for any questions they had.
-                        Much of our work involved troubleshooting the website or software that participants were using,
-                        which helped me gain a unique perspective on User Experience and Interface Design. I also
-                        trained new employees in using company software and benefit plan logistics.</p>
-                    </p>
-                    <h3>Skills Learned</h3>
-                    <ul>
-                        <li>Troubleshooting UI Issues</li>
-                        <li>Training/Leadership Skills</li>
-                        <li>Custom Service Skills</li>
-                    </ul>
-                </div>
-
-                <div class="company">
-                    <div class="company-pic">
-                        <img src="assets/churchlogo.png" alt="">
-                    </div>
-                    <h2>The Church of Jesus Christ of Latter-day Saints</h2>
-                </div>
-                <div class="jobdesc">
-                    <h3><i>Full Time Volunteer</i></h3>
-                    <p>I spent two years as a volunteer for the Church of Jesus Christ, living in various cities
-                        throughout central Germany. I worked an average of 80 hours a week supporting local members,
-                        organizing events, and teaching individuals and familes principles of self-reliance,
-                        physical-health, and language/communication. I also helped supervise groups of 8-10 other
-                        mission volunteers.
-                    </p>
-                    <h3>Skills Learned</h3>
-                    <ul>
-                        <li>German & Spanish Fluency</li>
-                        <li>Leadership Skills</li>
-                        <li>Working with Various Cultures</li>
-                    </ul>
-                </div>
-
-                <div class="line"></div>
+      <section id="work" class="section section--work">
+        <div class="section-wrapper">
+          <h1>Current Projects</h1>
+          <div class="card-container">
+            <div class="card">
+              <h2>
+                Web Design
+              </h2>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 502.664 502.664"
+                fill="#ffffff"
+                style="enable-background:new 0 0 502.664 502.664;"
+                xml:space="preserve"
+              >
+                <path
+                  d="M153.821,358.226L0,274.337v-46.463l153.821-83.414v54.574L46.636,250.523l107.185,53.431
+			C153.821,303.954,153.821,358.226,153.821,358.226z"
+                />
+                <path
+                  d="M180.094,387.584L282.103,115.08h32.227L212.084,387.584H180.094z"
+                />
+                <path
+                  d="M348.843,358.226v-54.272l107.164-52.999l-107.164-52.59v-53.927l153.821,83.522v46.183
+			L348.843,358.226z"
+                />
+              </svg>
             </div>
-        </section>
-
-
-        <section id="work" class="section section--work">
-            <div class="section-wrapper">
-                <h1>Current Projects</h1>
-                <div class="card-container">
-                    <div class="card">
-                        <h2>
-                            Web Design
-                        </h2>
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 502.664 502.664"
-                            fill="#ffffff" style="enable-background:new 0 0 502.664 502.664;" xml:space="preserve">
-                            <path d="M153.821,358.226L0,274.337v-46.463l153.821-83.414v54.574L46.636,250.523l107.185,53.431
-			C153.821,303.954,153.821,358.226,153.821,358.226z" />
-                            <path d="M180.094,387.584L282.103,115.08h32.227L212.084,387.584H180.094z" />
-                            <path d="M348.843,358.226v-54.272l107.164-52.999l-107.164-52.59v-53.927l153.821,83.522v46.183
-			L348.843,358.226z" />
-                        </svg>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Javascript
-                        </h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="#ffffff">
-                            <path
-                                d="M2 1v125h125v-125h-125zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065-.001-10.115.046-20.188.046-30.188h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-11.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z" />
-                        </svg>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            React Native
-                        </h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="#ffffff"
-                            enable-background="new 0 0 128 128">
-                            <g>
-                                <circle cx="64" cy="64" r="11.4" />
-                                <path
-                                    d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z" />
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            C++
-                        </h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="#FFFFFF">
-                            <path
-                                d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6l-48.3-27.8c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4v-55.8c.1-.8 0-1.7-.4-2.6zm-35.5 32.5v-4h5v-5h5v5h5v4h-5v5h-5v-5h-5zm3.3-14c-4.2-7.5-12.2-12.5-21.3-12.5-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5s17.7-39.5 39.5-39.5c14.7 0 27.5 8.1 34.3 20l-13 7.5zm29.7 14h-5v5h-4v-5h-6v-4h6v-5h4v5h5v4z" />
-                        </svg>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Python
-                        </h2>
-                        <svg width="100%" height="100%" viewBox="0 0 128 128" fill="#ffffff" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                            <path
-                                d="M35,30L35,19.183C35,10.758 37.098,6.188 49.453,4.007C53.646,3.264 58.268,2.839 63.258,2.816C68.25,2.792 73.431,3.172 78.445,4.007C86.368,5.327 93,11.271 93,19.183L93,46.981C93,55.132 86.606,62 78.489,62L49.33,62C39.372,62.056 31,70.347 31,79.952L31,93L21.054,93C12.569,93 7.614,86.983 5.539,78.341C2.739,66.73 2.858,59.931 5.539,48.811C7.862,39.108 15.292,34 23.776,34L64,34L64,30L35,30ZM47.492,22.89C44.466,22.89 42.014,20.411 42.014,17.345C42.014,14.266 44.465,11.764 47.492,11.764C50.507,11.764 52.971,14.266 52.971,17.345C52.97,20.411 50.506,22.89 47.492,22.89Z" />
-                            <path
-                                d="M107.682,34C116.178,34 120.183,40.363 122.281,48.811C125.198,60.584 125.32,69.218 122.281,78.34C119.329,87.224 116.166,93 107.682,93L64,93L64,97L93,97L93,108.126C93,116.549 85.862,120.831 78.513,122.96C67.456,126.168 58.704,125.677 49.462,122.96C41.745,120.69 35,116.036 35,108.126L35,80.326C35,72.326 41.342,65 49.33,65L78.489,65C88.206,65 97,57.031 97,46.981L97,34L107.682,34ZM80.326,104.417C83.353,104.417 85.805,106.896 85.805,109.964C85.805,113.04 83.354,115.543 80.326,115.543C77.311,115.543 74.848,113.041 74.848,109.964C74.848,106.896 77.311,104.417 80.326,104.417Z" />
-                        </svg>
-                    </div>
-                    <div class="card">
-                        <h2>
-                            Game Dev
-                        </h2>
-                        <svg width="256px" height="263px" viewBox="0 0 256 263" fill="#ffffff" version="1.1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            preserveAspectRatio="xMidYMid">
-                            <path
-                                d="M166.872326,131.23686 L212.781118,51.9623472 L234.965569,131.23686 L212.781118,210.493243 L166.872326,131.23686 L166.872326,131.23686 Z M144.495923,144.110517 L190.412179,223.373299 L110.445569,202.886567 L52.6751399,144.110517 L144.495923,144.110517 L144.495923,144.110517 Z M190.401515,39.0780261 L144.495923,118.352539 L52.6751399,118.352539 L110.445569,59.5732891 L190.401515,39.0780261 L190.401515,39.0780261 Z M255.940714,104.258913 L227.932619,0.0603519323 L123.392808,27.9852677 L107.918186,55.1924919 L76.5167858,54.9674802 L0,131.244325 L76.5167858,207.50304 L76.519985,207.50304 L107.907522,207.270564 L123.404539,234.477788 L227.932619,262.398438 L255.940714,158.219072 L240.035264,131.23686 L255.940714,104.258913 L255.940714,104.258913 Z">
-                            </path>
-                        </svg>
-                    </div>
-                </div>
+            <div class="card">
+              <h2>
+                Javascript
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                fill="#ffffff"
+              >
+                <path
+                  d="M2 1v125h125v-125h-125zm66.119 106.513c-1.845 3.749-5.367 6.212-9.448 7.401-6.271 1.44-12.269.619-16.731-2.059-2.986-1.832-5.318-4.652-6.901-7.901l9.52-5.83c.083.035.333.487.667 1.071 1.214 2.034 2.261 3.474 4.319 4.485 2.022.69 6.461 1.131 8.175-2.427 1.047-1.81.714-7.628.714-14.065-.001-10.115.046-20.188.046-30.188h11.709c0 11 .06 21.418 0 32.152.025 6.58.596 12.446-2.07 17.361zm48.574-3.308c-4.07 13.922-26.762 14.374-35.83 5.176-1.916-2.165-3.117-3.296-4.26-5.795 4.819-2.772 4.819-2.772 9.508-5.485 2.547 3.915 4.902 6.068 9.139 6.949 5.748.702 11.531-1.273 10.234-7.378-1.333-4.986-11.77-6.199-18.873-11.531-7.211-4.843-8.901-16.611-2.975-23.335 1.975-2.487 5.343-4.343 8.877-5.235l3.688-.477c7.081-.143 11.507 1.727 14.756 5.355.904.916 1.642 1.904 3.022 4.045-3.772 2.404-3.76 2.381-9.163 5.879-1.154-2.486-3.069-4.046-5.093-4.724-3.142-.952-7.104.083-7.926 3.403-.285 1.023-.226 1.975.227 3.665 1.273 2.903 5.545 4.165 9.377 5.926 11.031 4.474 14.756 9.271 15.672 14.981.882 4.916-.213 8.105-.38 8.581z"
+                />
+              </svg>
             </div>
-        </section>
-
-
-        <section id="contact" class="section section--contact">
-            <div class="section-wrapper">
-                <h1>Get In Touch</h1>
-                <div>
-                    <ul class="social-media">
-                        <li>
-                            <a href="https://www.facebook.com/nkumpf4">
-                                <img src="assets/facebook.svg" alt="Facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/nkumpf4/">
-                                <img src="assets/instagram.svg" alt="Instagram">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="assets/linkedin.svg" alt="LinkedIn">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/nkumpf4">
-                                <img src="assets/github.svg" alt="GitHub">
-                            </a>
-                        </li>
-                        <li class="inactive">
-                            <a href="">
-                                <img src="assets/Discord.png" alt="Discord">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-
-                <div class="contact-form">
-                    <form action="mailto:nekumpf@gmail.com" autocomplete="off" enctype="text/plain">
-                        <div class="outline">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Include your name">
-                        </div>
-
-                        <div class="outline outline--large">
-                            <label for="msg">Message</label>
-                            <textarea type="text" id="msg" name="body" placeholder="What's up?"></textarea>
-                        </div>
-
-                        <input type="submit" value="Send">
-                        <input type="reset" value="Reset">
-                    </form>
-                </div>
-
-
+            <div class="card">
+              <h2>
+                React Native
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                fill="#ffffff"
+                enable-background="new 0 0 128 128"
+              >
+                <g>
+                  <circle cx="64" cy="64" r="11.4" />
+                  <path
+                    d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3-12.5 4.8-19.3 11.4-19.3 18.8s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zm-14.8-30.5c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zm-11.2 59.3c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zm-25.6 27.1c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zm25.6-27.1c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zm-54.5-16.2c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zm-24.7 29c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5-13.8-4-22.1-10-22.1-15.6zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zm60.8-20.3c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"
+                  />
+                </g>
+              </svg>
             </div>
-        </section>
+            <div class="card">
+              <h2>
+                C++
+              </h2>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                fill="#FFFFFF"
+              >
+                <path
+                  d="M117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6l-48.3-27.8c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4v-55.8c.1-.8 0-1.7-.4-2.6zm-35.5 32.5v-4h5v-5h5v5h5v4h-5v5h-5v-5h-5zm3.3-14c-4.2-7.5-12.2-12.5-21.3-12.5-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8-21.8 0-39.5-17.7-39.5-39.5s17.7-39.5 39.5-39.5c14.7 0 27.5 8.1 34.3 20l-13 7.5zm29.7 14h-5v5h-4v-5h-6v-4h6v-5h4v5h5v4z"
+                />
+              </svg>
+            </div>
+            <div class="card">
+              <h2>
+                Python
+              </h2>
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 128 128"
+                fill="#ffffff"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xml:space="preserve"
+                xmlns:serif="http://www.serif.com/"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+              >
+                <path
+                  d="M35,30L35,19.183C35,10.758 37.098,6.188 49.453,4.007C53.646,3.264 58.268,2.839 63.258,2.816C68.25,2.792 73.431,3.172 78.445,4.007C86.368,5.327 93,11.271 93,19.183L93,46.981C93,55.132 86.606,62 78.489,62L49.33,62C39.372,62.056 31,70.347 31,79.952L31,93L21.054,93C12.569,93 7.614,86.983 5.539,78.341C2.739,66.73 2.858,59.931 5.539,48.811C7.862,39.108 15.292,34 23.776,34L64,34L64,30L35,30ZM47.492,22.89C44.466,22.89 42.014,20.411 42.014,17.345C42.014,14.266 44.465,11.764 47.492,11.764C50.507,11.764 52.971,14.266 52.971,17.345C52.97,20.411 50.506,22.89 47.492,22.89Z"
+                />
+                <path
+                  d="M107.682,34C116.178,34 120.183,40.363 122.281,48.811C125.198,60.584 125.32,69.218 122.281,78.34C119.329,87.224 116.166,93 107.682,93L64,93L64,97L93,97L93,108.126C93,116.549 85.862,120.831 78.513,122.96C67.456,126.168 58.704,125.677 49.462,122.96C41.745,120.69 35,116.036 35,108.126L35,80.326C35,72.326 41.342,65 49.33,65L78.489,65C88.206,65 97,57.031 97,46.981L97,34L107.682,34ZM80.326,104.417C83.353,104.417 85.805,106.896 85.805,109.964C85.805,113.04 83.354,115.543 80.326,115.543C77.311,115.543 74.848,113.041 74.848,109.964C74.848,106.896 77.311,104.417 80.326,104.417Z"
+                />
+              </svg>
+            </div>
+            <div class="card">
+              <h2>
+                Game Dev
+              </h2>
+              <svg
+                width="256px"
+                height="263px"
+                viewBox="0 0 256 263"
+                fill="#ffffff"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                preserveAspectRatio="xMidYMid"
+              >
+                <path
+                  d="M166.872326,131.23686 L212.781118,51.9623472 L234.965569,131.23686 L212.781118,210.493243 L166.872326,131.23686 L166.872326,131.23686 Z M144.495923,144.110517 L190.412179,223.373299 L110.445569,202.886567 L52.6751399,144.110517 L144.495923,144.110517 L144.495923,144.110517 Z M190.401515,39.0780261 L144.495923,118.352539 L52.6751399,118.352539 L110.445569,59.5732891 L190.401515,39.0780261 L190.401515,39.0780261 Z M255.940714,104.258913 L227.932619,0.0603519323 L123.392808,27.9852677 L107.918186,55.1924919 L76.5167858,54.9674802 L0,131.244325 L76.5167858,207.50304 L76.519985,207.50304 L107.907522,207.270564 L123.404539,234.477788 L227.932619,262.398438 L255.940714,158.219072 L240.035264,131.23686 L255.940714,104.258913 L255.940714,104.258913 Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="section-wrapper">
+          <h1>Get In Touch</h1>
+          <div>
+            <ul class="social-media">
+              <li>
+                <a href="https://www.facebook.com/nkumpf4">
+                  <img src="assets/facebook.svg" alt="Facebook" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/nkumpf4/">
+                  <img src="assets/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/linkedin.svg" alt="LinkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nkumpf4">
+                  <img src="assets/github.svg" alt="GitHub" />
+                </a>
+              </li>
+              <li class="inactive">
+                <a href="">
+                  <img src="assets/Discord.png" alt="Discord" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form">
+            <form
+              action="mailto:nekumpf@gmail.com"
+              autocomplete="off"
+              enctype="text/plain"
+            >
+              <div class="outline">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Include your name"
+                />
+              </div>
+
+              <div class="outline outline--large">
+                <label for="msg">Message</label>
+                <textarea
+                  type="text"
+                  id="msg"
+                  name="body"
+                  placeholder="What's up?"
+                ></textarea>
+              </div>
+
+              <input type="submit" value="Send" />
+              <input type="reset" value="Reset" />
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="js/scrollscripts.js"></script>
     <script src="js/navbar.js"></script>
-</body>
-
+  </body>
 </html>
